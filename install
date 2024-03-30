@@ -3,4 +3,5 @@ wget https://raw.githubusercontent.com/rosdiyanto/ping_reboot/main/ping_reboot
 cp ping_reboot /etc/init.d/
 chmod +x /etc/init.d/ping_reboot
 /etc/init.d/ping_reboot enable
-echo "Instalasi berhasil. Layanan ping_reboot telah diinstal dan diatur untuk dijalankan secara otomatis."
+echo -e "\e[32mInstalasi berhasil. Layanan ping_reboot telah diinstal dan diatur untuk dijalankan secara otomatis. Silahkan ketik reboot/matikan stb.\e[0m"
+
