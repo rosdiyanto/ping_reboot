@@ -5,7 +5,7 @@ Script yang dipakai untuk reboot otomatis openwrt ketika tidak ada koneksi inter
 - OpenWrt
   
 ## Installation
-- Buka terminal lalu pastekan kode install dibawah
+- Untuk menginstall script silahkan pastekan kode ini di terminal
 ```bash
 wget -O install https://raw.githubusercontent.com/rosdiyanto/ping_reboot/main/install && chmod +x install && ./install
 ```
