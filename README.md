@@ -15,6 +15,9 @@ Script yang dipakai untuk reboot otomatis openwrt ketika tidak ada koneksi inter
   # untuk menentukan berapa kali percobaan kegagalan ping sebelum reboot, nilai 10 maksudnya yaitu 10 kali percobaan perdetik
   FAILURE_THRESHOLD=10
 ```
+- Lakukan reboot/matikan stb
+- Selesai
 
 ## Note
 - Script akan otomatis dieksekusi ketika OpenWrt dijalankan
+- untuk mematikan script ketik ini di terminal /etc/init.d/ping_reboot disable
