@@ -1,0 +1,47 @@
+#!/bin/sh /etc/rc.common
+
+START=99
+
+start() {
+    IP_ADDRESS="google.com"
+    FAILURE_THRESHOLD=10
+    PING_COUNT=0
+    LOG_FILE="/tmp/continuous_ping_log.txt"
+
+    log_message() {
+        local message="$1"
+        echo "$(date): $message"
+        echo "$(date): $message" >> "$LOG_FILE"
+    }
+
+    perform_continuous_ping() {
+        local failure_count=0
+        while :
+        do
+            if ping -c 1 "$IP_ADDRESS" > /dev/null
+            then
+                failure_count=0
+				rm -f "$LOG_FILE"
+            else
+                failure_count=$((failure_count + 1))
+                log_message "Ping ke $IP_ADDRESS gagal ($failure_count kali)."
+                if [ $failure_count -ge $FAILURE_THRESHOLD ]; then
+                    log_message "Gagal ping $FAILURE_THRESHOLD kali. Melakukan reboot..."
+                    reboot
+                fi
+            fi
+            if [ $failure_count -eq 0 ]; then
+                failure_count=0
+            fi
+            sleep 1
+        done
+    }
+
+    log_message "Menunggu koneksi internet..."
+    while ! ping -q -c 1 "$IP_ADDRESS" > /dev/null; do
+        sleep 1
+    done &
+	
+    log_message "Koneksi internet terdeteksi. Memulai cek ping..."
+    perform_continuous_ping &
+}
