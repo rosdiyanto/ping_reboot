@@ -1,6 +1,6 @@
 #!/bin/bash
 wget https://raw.githubusercontent.com/rosdiyanto/ping_reboot/main/ping_reboot
-sudo cp ping_reboot /etc/init.d/
-sudo chmod +x /etc/init.d/ping_reboot
-sudo /etc/init.d/ping_reboot enable
+cp ping_reboot /etc/init.d/
+chmod +x /etc/init.d/ping_reboot
+/etc/init.d/ping_reboot enable
 echo "Instalasi berhasil. Layanan ping_reboot telah diinstal dan diatur untuk dijalankan secara otomatis."
