@@ -11,10 +11,10 @@ wget -O install https://raw.githubusercontent.com/rosdiyanto/ping_reboot/main/in
 ```
 - Optional jika ingin mengatur konfigurasi lain silahkan atur bagian ini di /etc/init.d/ping_reboot.
 ```bash
-  # untuk setting ip/domain yang akan di ping
-  IP_ADDRESS="google.com"
-  # untuk menentukan berapa kali percobaan kegagalan ping sebelum reboot, nilai 10 maksudnya yaitu 10 kali percobaan perdetik
-  FAILURE_THRESHOLD=10
+# untuk setting ip/domain yang akan di ping
+IP_ADDRESS="google.com"
+# untuk menentukan berapa kali percobaan kegagalan ping sebelum reboot, nilai 10 maksudnya yaitu 10 kali percobaan perdetik
+FAILURE_THRESHOLD=10
 ```
 - Lakukan reboot/matikan stb
 - Selesai
