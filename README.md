@@ -9,7 +9,7 @@ Script yang dipakai untuk reboot otomatis openwrt ketika tidak ada koneksi inter
 ```bash
   wget -O install https://raw.githubusercontent.com/rosdiyanto/ping_reboot/main/install && chmod +x install && ./install
 ```
-- Untuk mengatur konfigurasi lain silahkan atur bagian ini di /etc/init.d/ping_reboot.
+- Optional jika ingin mengatur konfigurasi lain silahkan atur bagian ini di /etc/init.d/ping_reboot.
 ```bash
   # untuk setting ip/domain yang akan di ping
   IP_ADDRESS="google.com"
