@@ -3,7 +3,7 @@ Script yang dipakai untuk reboot otomatis openwrt ketika tidak ada koneksi inter
 
 ## Requirements
 - OpenWrt
-- 
+  
 ## Installation
 - Copy ping_reboot ke directory /etc/init.d/lokasi_file, gunakan filezila/winscp
 - Ketik di terminal chmod +x /etc/init.d/ping_reboot
